@@ -6,7 +6,7 @@ const Home = () => {
     const { users } = useAuthContext();
     return (
         <PageLayout>
-            <main data-testid="home-page">
+            <main data-testid="home-page" style={{ paddingLeft: "24px" }}>
                 <h1>Heirarchy Tree</h1>
                 {users && users.map((user) => (
                     <UserLine key={user.id} user={user} />

@@ -40,8 +40,7 @@ const LoginForm = () => {
             setError(true);
         } else {
             const sortedUsers = sortUsersIntoHeirarchy(getUsers);
-            console.log(sortedUsers);
-            const user = getUsers.find((user: any) => user.id === getId);
+            const user = getUsers.find((user: { id: number }) => user.id === getId);
             if (user.error || user === null) {
                 setError(true);
             } else {

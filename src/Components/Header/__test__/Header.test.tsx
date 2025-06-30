@@ -1,6 +1,7 @@
 import { Header } from "../Header";
 import renderWithProviders from "@/testRender";
 import type { User } from "@/Contexts/Auth/AuthContext";
+import "@testing-library/jest-dom";
 
 describe("Header", () => {
     it("should render the header", () => {

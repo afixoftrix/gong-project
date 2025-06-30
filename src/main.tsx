@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import AuthProvider from '@/Contexts/Auth/AuthContext'
+import AuthProvider from '@/Contexts/Auth/AuthProvider'
 import AppRoutes from '@/AppRoutes'
 
 
