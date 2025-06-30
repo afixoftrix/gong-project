@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Login should render the login page 1`] = `
+<div>
+  <div
+    class="sc-jwTyAe fVxXEF"
+  >
+    <div
+      class="sc-bRKDuR bdgMDl"
+    >
+      <h1
+        class="sc-hvigdm wAmHt"
+      >
+        GONG App
+      </h1>
+      <div
+        class="sc-fhHczv jnREBO"
+      />
+    </div>
+    <div
+      class="sc-hjsuWn hiSqDz"
+    >
+      <div
+        class="sc-jJLAfE itGpbP"
+        data-testid="login-form"
+      >
+        <h1>
+          Please Login
+        </h1>
+        <form
+          class="sc-kcLKEh gXdJDl"
+        >
+          <div
+            class="sc-eqYatC gvEeo"
+          >
+            <label
+              class="sc-dYwGCk jhGDjP"
+            >
+              email address:
+            </label>
+            <input
+              class="sc-hwkwBN svYsw"
+              data-testid="email-input"
+              placeholder="Email"
+              required=""
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="sc-eqYatC gvEeo"
+          >
+            <label
+              class="sc-dYwGCk jhGDjP"
+            >
+              password:
+            </label>
+            <input
+              class="sc-hwkwBN svYsw"
+              data-testid="password-input"
+              placeholder="Password"
+              required=""
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="sc-eqYatC lmeqCM"
+          >
+            <button
+              class="sc-kNOymR lnJsRr"
+              data-testid="login-button"
+              disabled=""
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

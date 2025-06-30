@@ -12,7 +12,7 @@ export interface User {
   managerId?: number | null;
 }
 
-interface AuthContextType {
+export interface AuthContextType {
   isAuthenticated: boolean;
   setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
   user: User | null;

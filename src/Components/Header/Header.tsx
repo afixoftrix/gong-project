@@ -1,7 +1,7 @@
 import { HeaderContainer, HeaderTitle, HeaderActions, HeaderActionButton, UserInfo } from "./styles";
 import type { User } from "@/Contexts/Auth/AuthContext";
 
-export const Header = ({ loggedIn, user, setLogOut }: { loggedIn: boolean, user: User, setLogOut: () => void }) => {
+export const Header = ({ loggedIn, user, setLogOut }: { loggedIn: boolean, user: User | null, setLogOut: () => void }) => {
     return (
         <HeaderContainer>
             <HeaderTitle>
@@ -9,12 +9,12 @@ export const Header = ({ loggedIn, user, setLogOut }: { loggedIn: boolean, user:
             </HeaderTitle>
             <HeaderActions>
 
-                {loggedIn && (
+                {loggedIn && user && (
                     <>
-                        <UserInfo>
+                        <UserInfo data-testid="user-info">
                             <p>{user.firstName} {user.lastName}</p>
                         </UserInfo>
-                        <HeaderActionButton onClick={setLogOut}>
+                        <HeaderActionButton onClick={setLogOut} data-testid="logout-button">
                             Logout
                         </HeaderActionButton>
                     </>

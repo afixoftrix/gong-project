@@ -54,20 +54,20 @@ const LoginForm = () => {
     }
 
     return (
-        <LoginFormContainer>
+        <LoginFormContainer data-testid="login-form">
             <h1>Please Login</h1>
             {error && <FormError>Invalid email or password</FormError>}
             <Form onSubmit={handleSubmit}>
                 <InputGroup>
                     <FormLabel>email address:</FormLabel>
-                    <LoginFormInput type="email" placeholder="Email" value={email} onChange={(e) => handleChange(e, setEmail)} required />
+                    <LoginFormInput data-testid="email-input" type="email" placeholder="Email" value={email} onChange={(e) => handleChange(e, setEmail)} required />
                 </InputGroup>
                 <InputGroup>
                     <FormLabel>password:</FormLabel>
-                    <LoginFormInput type="password" placeholder="Password" value={password} onChange={(e) => handleChange(e, setPassword)} required />
+                    <LoginFormInput data-testid="password-input" type="password" placeholder="Password" value={password} onChange={(e) => handleChange(e, setPassword)} required />
                 </InputGroup>
-                <InputGroup center>
-                    <LoginFormButton type="submit" disabled={!validEmail || !validPassword}>{loading ? <BeatLoader color="#fff" size={10} /> : 'Login'}</LoginFormButton>
+                <InputGroup isCentered={true}>
+                    <LoginFormButton data-testid="login-button" type="submit" disabled={!validEmail || !validPassword}>{loading ? <BeatLoader color="#fff" size={10} /> : 'Login'}</LoginFormButton>
                 </InputGroup>
             </Form>
         </LoginFormContainer>

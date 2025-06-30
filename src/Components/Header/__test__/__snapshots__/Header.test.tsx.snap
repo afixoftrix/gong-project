@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Header should render the header 1`] = `
+<div>
+  <div
+    class="sc-bRKDuR bdgMDl"
+  >
+    <h1
+      class="sc-hvigdm wAmHt"
+    >
+      GONG App
+    </h1>
+    <div
+      class="sc-fhHczv jnREBO"
+    />
+  </div>
+</div>
+`;

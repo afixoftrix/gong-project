@@ -1,6 +1,6 @@
 import type { UserWithHierarchy } from "@/utils";
 import { useState } from "react";
-import { ChildrenContainer, Expander, Initials, UserImage, UserLineContainer, Container } from "./styles";
+import { ChildrenContainer, Expander, Initials, UserImage, UserLineContainer } from "./styles";
 
 export const UserLine = ({ user }: { user: UserWithHierarchy }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ export const UserLine = ({ user }: { user: UserWithHierarchy }) => {
     const initials = `${user.firstName[0]}${user.lastName[0]}`;
 
     return (
-        <div>
+        <div data-testid="user-line">
             <UserLineContainer>
                 {(user.children && user.children.length > 0) ? <Expander clickable={true} onClick={() => setIsOpen(!isOpen)}>{isOpen ? "-" : "+"}</Expander> : <Expander>-</Expander>}
                 {user.photo && !imageError ? (

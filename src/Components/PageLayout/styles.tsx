@@ -9,7 +9,9 @@ export const PageLayoutContainer = styled.div`
     width: 100vw;
 `;
 
-export const PageContent = styled.div<{ centerAlign?: boolean }>`
+export const PageContent = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== 'centerAlign'
+}) <{ centerAlign?: boolean }>`
     display: flex;
     flex-direction: column;
     align-items: ${({ centerAlign }) => centerAlign ? "center" : "flex-start"};

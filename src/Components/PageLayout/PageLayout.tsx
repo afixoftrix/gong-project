@@ -11,7 +11,7 @@ const PageLayout = ({ centerAlign, children }: PageLayoutProps) => {
     const { isAuthenticated, user, setIsAuthenticated } = useAuthContext();
     return (
         <PageLayoutContainer>
-            <Header user={user!} loggedIn={isAuthenticated} setLogOut={() => { setIsAuthenticated(false); }} />
+            <Header user={user} loggedIn={isAuthenticated} setLogOut={() => { setIsAuthenticated(false); }} />
             <PageContent centerAlign={centerAlign}>
                 {children}
             </PageContent>

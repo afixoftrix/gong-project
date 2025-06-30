@@ -56,14 +56,16 @@ export const FormError = styled.p`
 `;
 
 interface InputGroupProps {
-    center?: boolean;
+    isCentered?: boolean;
 }
 
-export const InputGroup = styled.div<InputGroupProps>`
+export const InputGroup = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== 'isCentered'
+}) <InputGroupProps>`
     margin-bottom: 1rem;
     display: flex;
     width: 400px;
-    justify-content: ${props => props.center ? "center" : "space-between"};
+    justify-content: ${props => props.isCentered ? "center" : "space-between"};
 `;
 
 export const Form = styled.form`

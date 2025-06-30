@@ -1,15 +1,17 @@
 import PageLayout from "../Components/PageLayout/PageLayout";
 import { useAuthContext } from "@/Contexts/Auth/useAuthContext";
-import { UserLine } from "@/Components/AccordionList/AccordionList";
+import { UserLine } from "@/Components/UserLine/UserLine";
 
 const Home = () => {
     const { users } = useAuthContext();
     return (
         <PageLayout>
-            <h1>Heirarchy Tree</h1>
-            {users && users.map((user) => (
-                <UserLine key={user.id} user={user} />
-            ))}
+            <main data-testid="home-page">
+                <h1>Heirarchy Tree</h1>
+                {users && users.map((user) => (
+                    <UserLine key={user.id} user={user} />
+                ))}
+            </main>
         </PageLayout>
     )
 }

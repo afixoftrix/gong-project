@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`LoginForm should render the login form 1`] = `
+<div>
+  <div
+    class="sc-bRKDuR ghykJF"
+    data-testid="login-form"
+  >
+    <h1>
+      Please Login
+    </h1>
+    <form
+      class="sc-hjsuWn kpuAyG"
+    >
+      <div
+        class="sc-jwTyAe iBkhdf"
+      >
+        <label
+          class="sc-ggWZvA cnWvYA"
+        >
+          email address:
+        </label>
+        <input
+          class="sc-hvigdm FeMfK"
+          data-testid="email-input"
+          placeholder="Email"
+          required=""
+          type="email"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-jwTyAe iBkhdf"
+      >
+        <label
+          class="sc-ggWZvA cnWvYA"
+        >
+          password:
+        </label>
+        <input
+          class="sc-hvigdm FeMfK"
+          data-testid="password-input"
+          placeholder="Password"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-jwTyAe iQyJqP"
+      >
+        <button
+          class="sc-fhHczv kteDK"
+          data-testid="login-button"
+          disabled=""
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
