@@ -9,11 +9,12 @@ export const PageLayoutContainer = styled.div`
     width: 100vw;
 `;
 
-export const PageContent = styled.div`
+export const PageContent = styled.div<{ centerAlign?: boolean }>`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: ${({ centerAlign }) => centerAlign ? "center" : "flex-start"};
+    justify-content: ${({ centerAlign }) => centerAlign ? "center" : "flex-start"};
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
 `;

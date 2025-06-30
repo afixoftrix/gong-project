@@ -26,3 +26,9 @@ export const HeaderActionButton = styled.button`
     border: none;
     cursor: pointer;
 `;
+
+export const UserInfo = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+`;

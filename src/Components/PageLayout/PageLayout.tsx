@@ -4,14 +4,15 @@ import { useAuthContext } from "@/Contexts/Auth/useAuthContext";
 
 interface PageLayoutProps {
     children: React.ReactNode;
+    centerAlign?: boolean;
 }
 
-const PageLayout = ({ children }: PageLayoutProps) => {
-    const { isAuthenticated } = useAuthContext();
+const PageLayout = ({ centerAlign, children }: PageLayoutProps) => {
+    const { isAuthenticated, user, setIsAuthenticated } = useAuthContext();
     return (
         <PageLayoutContainer>
-            <Header loggedIn={isAuthenticated} />
-            <PageContent>
+            <Header user={user!} loggedIn={isAuthenticated} setLogOut={() => { setIsAuthenticated(false); }} />
+            <PageContent centerAlign={centerAlign}>
                 {children}
             </PageContent>
         </PageLayoutContainer>
